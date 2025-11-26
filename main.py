@@ -1,14 +1,12 @@
-import gspread
-from google.oauth2.service_account import Credentials
-from dotenv import load_dotenv
-import os
-load_dotenv()
-sheet_id = os.environ['sheet_id'] 
-scopes = ["https://www.googleapis.com/auth/spreadsheets"]
-creds = Credentials.from_service_account_file("credentials.json", scopes=scopes)
-client = gspread.authorize(creds)
+from fastapi import FastAPI
+from routers.batch_router import router as batch_router
 
-sheet = client.open_by_key(sheet_id)
-values_list = sheet.sheet1.row_values(1)
+app = FastAPI()
 
-print(values_list)
+# Register Routers
+app.include_router(batch_router, prefix="/api")
+
+# Root route
+@app.get("/")
+def root():
+    return {"message": "Batch Lookup API is running!"}
