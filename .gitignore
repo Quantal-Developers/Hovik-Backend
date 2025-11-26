@@ -1,0 +1,62 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyd
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+*.env
+.env.*
+
+# MyPy, Pyre, Pylint, Ruff etc.
+.mypy_cache/
+.pyre/
+ruff_cache/
+.pylint.d/
+
+# VSCode / PyCharm
+.vscode/
+.idea/
+
+# --- Virtual Environment ---
+sheets/
+venv/
+env/
+.venv/
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Misc
+*.sqlite3
+credentials.json
+*.json
